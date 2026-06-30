@@ -10,7 +10,7 @@ const db = mysql.createPool({
     },
     waitForConnections: true,
     connectionLimit: 5, // Kurangi limit untuk serverless agar tidak overload
-    connectTimeout: 20000 // Naikkan ke 20 detik untuk kompensasi jarak server
+    connectTimeout: 100 // Naikkan ke 20 detik untuk kompensasi jarak server
 });
 
 // TEST KONEKSI SECARA LANGSUNG (Hasilnya bisa dilihat di log Vercel)
