@@ -1,21 +1,26 @@
 const mysql = require('mysql2/promise');
-const fs = require('fs');
-const path = require('path');
 
-// Mengambil file ca.pem dari root project
-const caPath = path.join(process.cwd(), 'ca.pem');
-
+// Inisialisasi pool menggunakan Service URI
 const db = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT,
+    uri: process.env.DATABASE_URL,
     ssl: {
-        ca: fs.existsSync(caPath) ? fs.readFileSync(caPath) : undefined,
+        // Abaikan pengecekan file fisik ca.pem, biarkan driver mysql2 
+        // melakukan negosiasi SSL otomatis dengan Aiven
+        rejectUnauthorized: false 
     },
     waitForConnections: true,
-    connectionLimit: 10,
+    connectionLimit: 5, // Kurangi limit untuk serverless agar tidak overload
+    connectTimeout: 20000 // Naikkan ke 20 detik untuk kompensasi jarak server
 });
+
+// TEST KONEKSI SECARA LANGSUNG (Hasilnya bisa dilihat di log Vercel)
+db.getConnection()
+    .then(conn => {
+        console.log("== KONEKSI DATABASE BERHASIL! ==");
+        conn.release();
+    })
+    .catch(err => {
+        console.error("== KONEKSI DATABASE GAGAL! == Error:", err.message);
+    });
 
 module.exports = db;
