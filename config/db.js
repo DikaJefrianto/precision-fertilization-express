@@ -10,7 +10,7 @@ const db = mysql.createPool({
     port: dbUrl.port ? parseInt(dbUrl.port) : 3306,
     user: decodeURIComponent(dbUrl.username),
     password: decodeURIComponent(dbUrl.password),
-    database: dbUrl.pathname.substring(1), // Menghapus tanda '/' di awal nama DB
+    database: 'fertiscan_db',
     ssl: {
         // Negosiasi SSL otomatis dengan Aiven tanpa file fisik ca.pem
         rejectUnauthorized: false 
