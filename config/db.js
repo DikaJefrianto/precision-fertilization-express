@@ -20,7 +20,7 @@ db.getConnection()
         conn.release();
     })
     .catch(err => {
-        console.error("== KONEKSI DATABASE GAGAL! == Error:", err.message);
+        console.error("== KONEKSI ke DATABASE GAGAL! == Error:", err.message);
     });
 
 module.exports = db;
