@@ -2,8 +2,8 @@ const mysql = require('mysql2/promise');
 const fs = require('fs');
 const path = require('path');
 
-// Gunakan process.cwd() agar Vercel mencari dari root folder
-const caCertPath = path.join(process.cwd(), 'ca.pem');
+// Mengambil file ca.pem dari root project
+const caPath = path.join(process.cwd(), 'ca.pem');
 
 const db = mysql.createPool({
     host: process.env.DB_HOST,
@@ -12,22 +12,10 @@ const db = mysql.createPool({
     database: process.env.DB_NAME,
     port: process.env.DB_PORT,
     ssl: {
-        // Baca file ca.pem dengan cara yang aman untuk cloud
-        ca: fs.readFileSync(caCertPath),
+        ca: fs.existsSync(caPath) ? fs.readFileSync(caPath) : undefined,
     },
     waitForConnections: true,
     connectionLimit: 10,
-    queueLimit: 0
 });
-
-// Tes koneksi saat server startup (Lihat di log Vercel)
-db.getConnection()
-    .then(conn => {
-        console.log("SUKSES: Terhubung ke database Aiven!");
-        conn.release();
-    })
-    .catch(err => {
-        console.error("GAGAL: Koneksi database bermasalah:", err.message);
-    });
 
 module.exports = db;
