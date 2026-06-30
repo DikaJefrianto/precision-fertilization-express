@@ -1,0 +1,34 @@
+2026-06-30 00:16:35 INFO: [Admin] Statistik diakses oleh Admin ID: 1
+2026-06-30 00:16:35 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:16:35 +0000] "GET /api/admin/stats HTTP/1.1" 200 111 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:16:39 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:16:39 +0000] "GET /api/admin/pakar HTTP/1.1" 200 2518 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:29:26 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:29:26 +0000] "POST /api/admin/pakar HTTP/1.1" 201 53 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:29:58 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:29:58 +0000] "GET /api/admin/pakar HTTP/1.1" 200 2708 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:29:59 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:29:59 +0000] "GET /api/admin/pakar HTTP/1.1" 200 2708 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:32:27 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:32:27 +0000] "PUT /api/admin/pakar/13 HTTP/1.1" 200 56 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:32:38 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:32:38 +0000] "PUT /api/admin/pakar/13 HTTP/1.1" 200 56 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:33:28 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:33:28 +0000] "GET /api/admin/pakar HTTP/1.1" 200 2708 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:33:30 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:33:30 +0000] "GET /api/admin/pakar HTTP/1.1" 200 2708 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:34:26 WARN: [Admin] Menghapus aturan hara fase: Vegetatif Aktif (ID: 13)
+2026-06-30 00:34:26 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:34:26 +0000] "DELETE /api/admin/pakar/13 HTTP/1.1" 200 64 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:34:26 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:34:26 +0000] "GET /api/admin/pakar HTTP/1.1" 200 2518 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:34:34 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:34:34 +0000] "GET /api/admin/pakar HTTP/1.1" 200 2518 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:34:56 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:34:56 +0000] "GET /api/auth/profile HTTP/1.1" 200 244 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:34:57 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:34:57 +0000] "GET /uploads/profiles/1781529417813-scaled_1000328732.jpg?t=1782754327827 HTTP/1.1" 200 502959 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:35:00 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:35:00 +0000] "GET /uploads/profiles/1781529417813-scaled_1000328732.jpg?v=1782754330714 HTTP/1.1" 200 502959 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:35:15 INFO: [Admin] Statistik diakses oleh Admin ID: 1
+2026-06-30 00:35:15 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:35:15 +0000] "GET /api/admin/stats HTTP/1.1" 200 111 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:35:22 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:35:22 +0000] "GET /api/auth/profile HTTP/1.1" 200 244 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:35:22 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:35:22 +0000] "GET /uploads/profiles/1781529417813-scaled_1000328732.jpg?t=1782754352860 HTTP/1.1" 200 502959 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:35:23 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:35:23 +0000] "GET /uploads/profiles/1781529417813-scaled_1000328732.jpg?v=1782754353874 HTTP/1.1" 200 502959 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:35:31 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:35:31 +0000] "PUT /api/auth/update-profile HTTP/1.1" 200 50 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:35:32 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:35:32 +0000] "POST /api/auth/upload-photo HTTP/1.1" 200 104 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:35:34 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:35:34 +0000] "GET /api/auth/profile HTTP/1.1" 200 244 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:35:34 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:35:34 +0000] "GET /uploads/profiles/1782754531975-scaled_1000329795.jpg?t=1782754365016 HTTP/1.1" 200 60487 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:47:45 INFO: [Admin] Statistik diakses oleh Admin ID: 1
+2026-06-30 00:47:45 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:47:45 +0000] "GET /api/admin/stats HTTP/1.1" 200 111 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:47:46 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:47:46 +0000] "GET /api/admin/pakar HTTP/1.1" 200 2518 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:47:47 INFO: ::ffff:192.168.198.147 - - [29/Jun/2026:17:47:47 +0000] "GET /api/admin/pakar HTTP/1.1" 200 2518 "-" "Dart/3.0 (dart:io)"
+2026-06-30 00:52:35 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-30 10:28:43 INFO: [Success] Server FertiScan berjalan di port 21574
+2026-06-30 10:34:47 INFO: [Success] Server FertiScan berjalan di port 21574
+2026-06-30 10:40:13 INFO: [Success] Server FertiScan berjalan di port 21574

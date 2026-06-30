@@ -1,0 +1,143 @@
+2026-06-25 09:32:58 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 09:46:03 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 10:03:35 INFO: [Auth] Percobaan login: petani@gmail.com
+2026-06-25 10:03:35 INFO: [Auth] Login sukses: petani@gmail.com (Petani) masuk ke sistem
+2026-06-25 10:03:35 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:03:35 +0000] "POST /api/auth/login HTTP/1.1" 200 265 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:03:37 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:03:37 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 429 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:03:39 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:03:39 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782356618994 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:04:03 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:04:03 +0000] "POST /api/hitung-rekomendasi HTTP/1.1" 404 162 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:23:57 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:23:57 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 429 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:23:59 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:23:59 +0000] "GET /api/auth/profile HTTP/1.1" 200 245 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:00 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:00 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782357669420 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:01 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:01 +0000] "GET /api/auth/profile HTTP/1.1" 200 245 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:02 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:02 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782357671425 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:02 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:02 +0000] "GET /api/auth/profile HTTP/1.1" 200 245 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:03 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:03 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782357673085 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:04 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:04 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782357674688 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:07 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:07 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 429 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:09 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:09 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782357679665 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:09 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:09 +0000] "GET /api/auth/profile HTTP/1.1" 200 245 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:11 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:11 +0000] "GET /api/auth/profile HTTP/1.1" 200 245 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:11 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:11 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782357681873 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:13 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:13 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782357683425 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 10:24:25 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:03:24:25 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 11:38:18 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:04:38:18 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 429 "-" "Dart/3.0 (dart:io)"
+2026-06-25 11:38:21 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:04:38:21 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782362130688 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 11:39:14 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:04:39:14 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 429 "-" "Dart/3.0 (dart:io)"
+2026-06-25 11:39:16 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:04:39:16 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782362186687 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 11:40:20 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:04:40:20 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 429 "-" "Dart/3.0 (dart:io)"
+2026-06-25 11:40:21 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:04:40:21 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782362251982 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 11:42:21 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:04:42:21 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 429 "-" "Dart/3.0 (dart:io)"
+2026-06-25 11:42:23 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:04:42:23 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782362373935 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 11:44:20 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:04:44:20 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 429 "-" "Dart/3.0 (dart:io)"
+2026-06-25 11:44:21 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:04:44:21 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782362492476 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 13:20:54 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 13:20:56 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 13:20:59 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 13:21:01 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 13:21:04 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 13:21:06 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 13:21:08 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 13:21:11 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 13:21:13 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 13:48:14 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:06:48:14 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 429 "-" "Dart/3.0 (dart:io)"
+2026-06-25 13:48:25 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:06:48:25 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782369926469 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 13:48:43 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:06:48:43 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 13:48:46 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:06:48:46 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 429 "-" "Dart/3.0 (dart:io)"
+2026-06-25 13:48:48 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:06:48:48 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 13:48:54 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:06:48:54 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782369958742 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 13:51:13 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:06:51:13 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 429 "-" "Dart/3.0 (dart:io)"
+2026-06-25 13:51:20 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:06:51:20 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782370105676 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 13:51:37 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:06:51:37 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782370124179 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 13:52:04 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:06:52:04 +0000] "POST /api/hitung-rekomendasi HTTP/1.1" 404 162 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:00:08 INFO: [Expert System] Menghitung untuk User: 3, Tanah: Tanah Merah, HST: 5
+2026-06-25 14:00:08 INFO: [Expert System] Sukses. Biaya: Rp 195260.86956521738. ID Riwayat: 2
+2026-06-25 14:00:08 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:00:08 +0000] "POST /api/hitung-dosis HTTP/1.1" 200 301 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:08:28 INFO: [Expert System] Menghitung untuk User: 3, Tanah: Tanah Merah, HST: 5
+2026-06-25 14:08:28 INFO: [Expert System] Sukses. Biaya: Rp 195260.86956521738. ID Riwayat: 3
+2026-06-25 14:08:28 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:08:28 +0000] "POST /api/hitung-dosis HTTP/1.1" 200 301 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:09:36 INFO: [Expert System] Menghitung untuk User: 3, Tanah: Tanah Merah, HST: 45
+2026-06-25 14:09:36 INFO: [Expert System] Sukses. Biaya: Rp 977478.2608695651. ID Riwayat: 4
+2026-06-25 14:09:36 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:09:36 +0000] "POST /api/hitung-dosis HTTP/1.1" 200 298 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:09:54 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:09:54 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:09:58 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:09:58 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:09:59 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:09:59 +0000] "GET /api/auth/profile HTTP/1.1" 200 245 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:10:01 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:10:01 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:10:03 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:10:03 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782371231689 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:10:12 INFO: [Expert System] Menghitung untuk User: 3, Tanah: Tanah Merah, HST: 15
+2026-06-25 14:10:12 INFO: [Expert System] Sukses. Biaya: Rp 650869.5652173912. ID Riwayat: 5
+2026-06-25 14:10:12 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:10:12 +0000] "POST /api/hitung-dosis HTTP/1.1" 200 300 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:10:55 INFO: [Expert System] Menghitung untuk User: 3, Tanah: Tanah Merah, HST: 15
+2026-06-25 14:10:55 INFO: [Expert System] Sukses. Biaya: Rp 650869.5652173912. ID Riwayat: 6
+2026-06-25 14:10:55 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:10:55 +0000] "POST /api/hitung-dosis HTTP/1.1" 200 300 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:16:26 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:16:26 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:18:13 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:18:15 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:18:18 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:22:23 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:22:23 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:22:24 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:22:24 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:22:25 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:22:25 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:22:25 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:22:25 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:22:43 INFO: [Expert System] Menghitung untuk User: 3, Tanah: Tanah Merah, HST: 15
+2026-06-25 14:22:43 INFO: [Expert System] Sukses. Biaya: Rp 130173.91304347826. ID Riwayat: 7
+2026-06-25 14:22:43 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:22:43 +0000] "POST /api/hitung-dosis HTTP/1.1" 200 301 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:24:27 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:26:21 INFO: [Expert System] Menghitung untuk User: 3, Tanah: Tanah Merah, HST: 15
+2026-06-25 14:26:21 INFO: [Expert System] Sukses. Biaya: Rp 130173.91304347826. ID Riwayat: 8
+2026-06-25 14:26:21 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:26:21 +0000] "POST /api/hitung-dosis HTTP/1.1" 200 301 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:26:25 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:26:25 +0000] "GET /api/riwayat HTTP/1.1" 200 1613 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:29:34 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:29:34 +0000] "GET /api/riwayat HTTP/1.1" 200 1374 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:33:45 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:33:45 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 769 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:33:47 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:33:47 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782372657785 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:34:09 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:34:09 +0000] "GET /api/riwayat HTTP/1.1" 200 1374 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:34:11 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:34:11 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 769 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:34:12 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:34:12 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782372683629 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:37:31 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:37:34 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:37:37 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:37:40 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:37:42 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:37:45 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:37:52 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:37:55 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:37:59 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:38:01 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:38:03 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:40:04 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:40:08 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:40:11 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:40:14 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:40:17 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:40:20 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:40:21 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:40:24 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:40:28 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:40:29 INFO: [Success] Server FertiScan berjalan di port 5000
+2026-06-25 14:40:36 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:40:36 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 769 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:40:36 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:40:36 +0000] "GET /api/riwayat HTTP/1.1" 200 1374 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:40:38 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:40:38 +0000] "GET /api/riwayat HTTP/1.1" 200 1374 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:40:38 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:40:38 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782373068223 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:43:53 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:43:53 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 769 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:43:55 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:43:55 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782373265918 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:51:20 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:51:20 +0000] "POST /api/hitung-rekomendasi HTTP/1.1" 404 162 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:52:10 INFO: [Expert System] Menghitung untuk User: 3, Tanah: Tanah Hitam, HST: 15
+2026-06-25 14:52:10 INFO: [Expert System] Sukses Simpan Riwayat. ID: 9 | Foto: null
+2026-06-25 14:52:10 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:52:10 +0000] "POST /api/hitung-dosis HTTP/1.1" 200 320 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:52:17 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:52:17 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:52:18 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:52:18 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:52:19 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:52:19 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:52:19 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:52:19 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:52:20 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:52:20 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:52:20 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:52:20 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:52:20 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:52:20 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:52:20 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:52:20 +0000] "GET /api/riwayat-saya HTTP/1.1" 404 155 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:53:14 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:53:14 +0000] "GET /api/riwayat HTTP/1.1" 200 1562 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:55:03 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:55:03 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 767 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:55:04 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:55:04 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782373935315 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:55:05 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:55:05 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 767 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:55:06 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:55:06 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782373937272 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:55:06 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:55:06 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 767 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:55:07 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:55:07 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782373938623 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:55:10 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:55:10 +0000] "GET /api/dashboard-stats HTTP/1.1" 200 767 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:55:11 INFO: ::ffff:10.20.27.246 - - [25/Jun/2026:07:55:11 +0000] "GET /uploads/profiles/1782112758564-scaled_1000329796.jpg?t=1782373942145 HTTP/1.1" 200 471472 "-" "Dart/3.0 (dart:io)"
+2026-06-25 14:58:10 INFO: [Success] Server FertiScan berjalan di port 5000
