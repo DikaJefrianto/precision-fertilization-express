@@ -1,8 +1,6 @@
 const mysql = require('mysql2/promise');
 require('dotenv').config();
 
-// CRITICAL FIX: mysql2 tidak membaca properti { uri: ... } di dalam objek.
-// Kita breakdown DATABASE_URL menggunakan URL parser bawaan Node.js.
 const dbUrl = new URL(process.env.DATABASE_URL);
 
 const db = mysql.createPool({
@@ -12,16 +10,13 @@ const db = mysql.createPool({
     password: decodeURIComponent(dbUrl.password),
     database: 'fertiscan_db',
     ssl: {
-        // Negosiasi SSL otomatis dengan Aiven tanpa file fisik ca.pem
         rejectUnauthorized: false 
     },
     waitForConnections: true,
-    connectionLimit: 5, // Sudah sangat pas untuk arsitektur serverless
-    connectTimeout: 20000 // CRITICAL FIX: 20000 ms = 20 detik (sebelumnya 100 ms = 0.1 detik)
+    connectionLimit: 5, 
+    connectTimeout: 20000 
 });
 
-// CRITICAL EFFICIENCY: Jalankan test koneksi langsung hanya di komputer lokal (Development).
-// Di Vercel (Production), kita hindari ini untuk menghemat performa Cold Start.
 if (process.env.NODE_ENV !== 'production') {
     db.getConnection()
         .then(conn => {

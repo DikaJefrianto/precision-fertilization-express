@@ -1,8 +1,19 @@
 const db = require('../config/db');
 const logger = require('../config/logger');
+const fs = require('fs'); // Tambahan modul File System bawaan Node.js
+const cloudinary = require('cloudinary').v2; // Tambahan SDK Cloudinary
+
+// ============================================================
+// 1. KONFIGURASI KREDENSIAL CLOUDINARY
+// ============================================================
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+});
 
 exports.hitungDosisPresisi = async (req, res) => {
-    // accuracy_input dikirim dari Flutter hasil tangkapan scan Flask sebelumnya
+    // Ambil parameter teks dari req.body yang dikirim Flutter
     const { 
         label_tanah_ai, 
         n_input, 
@@ -14,17 +25,37 @@ exports.hitungDosisPresisi = async (req, res) => {
     } = req.body;
     
     const id_user = req.user.id;
-    const nama_file_foto = req.file ? req.file.filename : null;
+    
+    // Ambil jalur lengkap file temporary dari /tmp Vercel
+    const localFilePath = req.file ? req.file.path : null;
+    let finalImageUrl = null; // Menampung URL permanen dari Cloudinary
 
     try {
-        // Log untuk memantau apakah akurasi masuk ke Express.js
         console.log(`[DEBUG] Accuracy received from Flutter: ${accuracy_input}`);
         logger.info(`[Expert System] Menghitung dosis untuk User: ${id_user}, Tanah: ${label_tanah_ai}`);
 
+        // ============================================================
+        // 2. PROSES UNGGAH GAMBAR KE CLOUDINARY (PERMANEN)
+        // ============================================================
+        if (localFilePath) {
+            const uploadResult = await cloudinary.uploader.upload(localFilePath, {
+                folder: 'fertiscan/soils', // Folder penyimpanan di Cloudinary
+                resource_type: 'image'
+            });
+            
+            // Simpan URL HTTPS permanen dari Cloudinary
+            finalImageUrl = uploadResult.secure_url;
+            console.log(`[DEBUG] Image successfully uploaded permanently to Cloudinary: ${finalImageUrl}`);
+
+            // CRITICAL CLEANUP: Langsung hapus file fisik di /tmp Vercel agar RAM bersih
+            if (fs.existsSync(localFilePath)) {
+                fs.unlinkSync(localFilePath);
+            }
+        }
+
         const luas = parseFloat(luas_lahan) || 1;
 
-        // 1. Ambil Target Hara dari Pakar berdasarkan Label Tanah dan HST
-        // Logika SUBSTRING_INDEX digunakan untuk membedah rentang hst (misal '0-20')
+        // 3. Ambil Target Hara dari Pakar berdasarkan Label Tanah dan HST
         const [rowsPakar] = await db.query(
             "SELECT * FROM pakar_hara WHERE label_tanah = ? AND ? BETWEEN CAST(SUBSTRING_INDEX(rentang_hst, '-', 1) AS UNSIGNED) AND CAST(SUBSTRING_INDEX(rentang_hst, '-', -1) AS UNSIGNED) LIMIT 1",
             [label_tanah_ai, hst_input]
@@ -36,24 +67,20 @@ exports.hitungDosisPresisi = async (req, res) => {
         
         const target = rowsPakar[0];
 
-        // 2. Hitung Defisit Hara Total (Kg) sesuai Luas Lahan
-        // Defisit = (Target Standar - Input User) * Luas Lahan
+        // 4. Hitung Defisit Hara Total (Kg) sesuai Luas Lahan
         const defisitN = Math.max(0, (parseFloat(target.target_n) - parseFloat(n_input)) * luas);
         const defisitP = Math.max(0, (parseFloat(target.target_p) - parseFloat(p_input)) * luas);
         const defisitK = Math.max(0, (parseFloat(target.target_k) - parseFloat(k_input)) * luas);
 
-        // 3. Ambil Semua Data Master Pupuk
+        // 5. Ambil Semua Data Master Pupuk
         const [rowsPupuk] = await db.query("SELECT * FROM master_pupuk");
 
-        // 4. LOGIKA FILTERING & RANKING (Berdasarkan Kolom Database Anda)
+        // 6. LOGIKA FILTERING & RANKING
         let nitrogenList = [];
         let fosforList = [];
         let kaliumList = [];
 
         rowsPupuk.forEach(p => {
-            // Cek ketersediaan unsur hara di tiap pupuk
-            // Kadar murni diambil dari kolom: kadar_n_persen, kadar_p_persen, kadar_k_persen
-            
             // Grup Nitrogen
             if (defisitN > 0 && p.kadar_n_persen > 0) {
                 nitrogenList.push({
@@ -97,47 +124,53 @@ exports.hitungDosisPresisi = async (req, res) => {
             }
         });
 
-        // Sorting: Rank 1 adalah pupuk dengan kadar tertinggi (Paling Efisien)
+        // Sorting: Rank tertinggi berdasarkan kadar tertinggi
         nitrogenList.sort((a, b) => b.kadar - a.kadar);
         fosforList.sort((a, b) => b.kadar - a.kadar);
         kaliumList.sort((a, b) => b.kadar - a.kadar);
 
-        // 5. Simpan ke Tabel Riwayat
+        // 7. Simpan ke Tabel Riwayat Database Aiven (Menggunakan URL Cloudinary)
         const ringkasanText = `N:${defisitN.toFixed(1)}kg, P:${defisitP.toFixed(1)}kg, K:${defisitK.toFixed(1)}kg`;
         const queryRiwayat = `
             INSERT INTO riwayat (id_pengguna, jalur_foto, label_tanah_ai, n_input, p_input, k_input, hst_input, luas_lahan, rekomendasi_hasil) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         `;
 
+        // FIX: Kolom jalur_foto sekarang diisi oleh String URL Cloudinary permanen (finalImageUrl)
         await db.query(queryRiwayat, [
             id_user, 
-            nama_file_foto, 
+            finalImageUrl, 
             label_tanah_ai, 
             n_input, p_input, k_input, hst_input, luas_lahan, 
             ringkasanText
         ]);
 
-        // 6. Kirim Response JSON
-        res.json({
+        // 8. Kirim Response JSON Sukses ke Flutter
+        return res.json({
             status: "success",
             message: "[Success] Analisis Berhasil",
             data: {
                 fase: target.nama_fase,
                 jenis_tanah: label_tanah_ai,
                 luas_lahan: luas,
-                accuracy: accuracy_input, // Mengirimkan nilai murni dari Flutter
+                accuracy: accuracy_input,
                 saran_pakar: target.saran_pakar,
                 rekomendasi: {
                     nitrogen: nitrogenList,
                     fosfor: fosforList,
                     kalium: kaliumList
                 },
-                foto_tanah: nama_file_foto
+                foto_tanah: finalImageUrl
             }
         });
 
     } catch (error) {
+
+        if (localFilePath && fs.existsSync(localFilePath)) {
+            fs.unlinkSync(localFilePath);
+        }
+        
         logger.error(`[Rekomendasi Error] ${error.message}`);
-        res.status(500).json({ status: "error", message: error.message });
+        return res.status(500).json({ status: "error", message: error.message });
     }
 };
