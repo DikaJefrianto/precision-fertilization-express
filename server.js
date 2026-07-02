@@ -43,6 +43,15 @@ app.get('/', (req, res) => {
     });
 });
 
+app.get('/api/ping', async (req, res) => {
+    try {
+        await db.query('SELECT 1'); // Query paling ringan di MySQL
+        res.json({ status: "alive", db: "connected" });
+    } catch (err) {
+        res.status(500).json({ status: "error", message: err.message });
+    }
+});
+
 // 6. Handle 404 (Route tidak ditemukan)
 app.use((req, res) => {
     res.status(404).json({ message: "Endpoint tidak ditemukan." });
