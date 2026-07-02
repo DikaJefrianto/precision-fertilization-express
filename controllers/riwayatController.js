@@ -2,19 +2,43 @@ const db = require('../config/db');
 
 exports.ambilRiwayatPetani = async (req, res) => {
     const id_user = req.user.id;
+
     try {
+
         const [rows] = await db.query(
-            // TAMBAHKAN 'jalur_foto' di baris SELECT ini
             "SELECT id, id_pengguna, jalur_foto, label_tanah_ai, n_input, p_input, k_input, hst_input, luas_lahan, rekomendasi_hasil, tanggal_simpan FROM riwayat WHERE id_pengguna = ? ORDER BY tanggal_simpan DESC",
             [id_user]
         );
 
-        // Debug: Lihat di terminal VS Code laptop, apakah jalur_foto muncul?
-        console.log("Data dikirim ke HP:", rows[0]); 
+        const dataTerformat = rows.map(item => {
+            let fotoUrl = item.jalur_foto;
 
-        res.json({ message: "[Success] Riwayat dimuat", data: rows });
+            if (fotoUrl && !fotoUrl.startsWith('http')) {
+
+                fotoUrl = `${req.protocol}://${req.get('host')}/uploads/soils/${fotoUrl}`;
+            }
+
+            return {
+                ...item,
+                jalur_foto: fotoUrl 
+            };
+        });
+        return res.json({
+            status: "success",
+            data: dataTerformat
+        });
+
     } catch (error) {
-        res.status(500).json({ message: "[Error] Gagal" });
+        if (typeof logger !== 'undefined' && logger.error) {
+            logger.error(`[Riwayat Error] ${error.message}`);
+        } else {
+            console.error("[Riwayat Error]", error.message);
+        }
+        
+        return res.status(500).json({ 
+            status: "error", 
+            message: "Gagal memuat riwayat: " + error.message 
+        });
     }
 };
 
