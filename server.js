@@ -13,10 +13,10 @@ const petaniRoutes = require('./routes/petaniRoutes');
 
 const app = express();
 
-// 1. Middleware Logging (Morgan)
-// Di Vercel, morgan harus menulis ke stream logger yang HANYA menggunakan Console
+// 1. Middleware Logging (Morgan) - Dioptimalkan untuk UptimeRobot
 app.use(morgan('combined', { 
-    stream: { write: (message) => logger.info(message.trim()) } 
+    stream: { write: (message) => logger.info(message.trim()) },
+    skip: (req, res) => req.headers['user-agent']?.includes('UptimeRobot')
 }));
 
 // 2. Standard Middlewares
